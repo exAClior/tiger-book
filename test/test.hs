@@ -1,4 +1,7 @@
 module Main (main) where
 
-main :: IO ()
-main = putStrLn "Test suite not yet implemented."
+import TestCommonWords (removeSymbolsTest, dummyTest )
+
+main = do
+  putStrLn "Get my handy tests started!"
+  defaultMain (testGroup "Common Words Tests" [dummyTest, removeSymbolsTest])
